@@ -1,7 +1,9 @@
+import { Typography } from "@material-ui/core";
+
 function Index() {
   return (
     <div>
-      <h1>Hello World</h1>
+      <Typography variant="h1">Test</Typography>
     </div>
   );
 }
