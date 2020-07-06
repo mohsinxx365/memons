@@ -14,14 +14,19 @@ export default createMuiTheme({
         "sans-serif",
       ].join(","),
       color: "#273849",
-      letterSpacing: "2px",
+      letterSpacing: "1px",
     },
   },
+
   palette: {
     primary: {
       main: "#4FC08D",
     },
+    background: {
+      default: "#FAFAFA",
+    },
   },
+
   overrides: {
     MuiTabs: {
       flexContainer: {

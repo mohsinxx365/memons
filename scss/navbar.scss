@@ -1,0 +1,36 @@
+@import "./modules/breakpoints";
+
+.navigation {
+  background-color: var(--main);
+  box-shadow: var(--shadow);
+  flex-direction: row;
+
+  .main-title {
+    letter-spacing: 2px;
+    font-weight: bold;
+  }
+
+  .logo-container {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    margin-left: 20px;
+    height: 48px;
+  }
+
+  .bottomContainer {
+    display: none;
+  }
+  @include md {
+    .navTabs {
+      display: none;
+    }
+    .bottomContainer {
+      display: block;
+      width: 100%;
+      position: fixed;
+      bottom: 0;
+      z-index: 2;
+    }
+  }
+}
