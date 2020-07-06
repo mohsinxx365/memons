@@ -19,18 +19,24 @@
   }
 
   .bottomContainer {
+    display: block;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    z-index: 2;
+  }
+
+  .navTabs {
     display: none;
   }
-  @include md {
-    .navTabs {
+
+  @include mdUp {
+    .bottomContainer {
       display: none;
     }
-    .bottomContainer {
-      display: block;
-      width: 100%;
-      position: fixed;
-      bottom: 0;
-      z-index: 2;
+
+    .navTabs {
+      display: flex;
     }
   }
 }

@@ -40,7 +40,7 @@ export default createMuiTheme({
     },
     MuiBottomNavigationAction: {
       label: {
-        fontFamily: ["Jost", "sans-serif"].join(","),
+        fontFamily: ["Sen", "sans-serif"].join(","),
         fontSize: 13,
       },
     },

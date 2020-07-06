@@ -1,23 +1,29 @@
-@mixin sm {
+@mixin smDown {
   @media only screen and (max-width: 576px) {
     @content;
   }
 }
 
-@mixin md {
-  @media only screen and (max-width: 768px) {
+@mixin smUp {
+  @media only screen and (min-width: 576px) {
     @content;
   }
 }
 
-@mixin lg {
-  @media only screen and (max-width: 992px) {
+@mixin mdUp {
+  @media only screen and (min-width: 768px) {
     @content;
   }
 }
 
-@mixin xl {
-  @media only screen and (max-width: 1200px) {
+@mixin lgUp {
+  @media only screen and (min-width: 992px) {
+    @content;
+  }
+}
+
+@mixin xlUp {
+  @media only screen and (min-width: 1200px) {
     @content;
   }
 }
