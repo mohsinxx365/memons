@@ -25,8 +25,8 @@ export default () => {
         </div>
         <div className="bottomContainer">
           <BottomNavigation value={value} showLabels onChange={handleChange}>
-            {routes.map(({ label, icon }) => (
-              <BottomNavigationAction icon={icon} />
+            {routes.map(({ label, icon, key }) => (
+              <BottomNavigationAction icon={icon} key={key} />
             ))}
           </BottomNavigation>
         </div>
@@ -36,8 +36,8 @@ export default () => {
           indicatorColor="primary"
           className="navTabs"
         >
-          {routes.map(({ label }) => (
-            <Tab label={label} />
+          {routes.map(({ label, key }) => (
+            <Tab label={label} key={key} />
           ))}
         </Tabs>
       </AppBar>

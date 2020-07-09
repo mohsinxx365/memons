@@ -7,27 +7,23 @@ export const breakpoints = {
   xlUp: 1200,
 };
 
-export const respondTo = (key) => {
-  return (style) =>
-    css`
-      @media (min-width: ${breakpoints[key]}px) {
-        ${style}
-      }
-    `;
-};
+export const respondTo = (key) => (style) =>
+  css`
+    @media (min-width: ${breakpoints[key]}px) {
+      ${style}
+    }
+  `;
 
-export const flexCenter = (direction) => {
-  return css`
+export const flexCenter = (direction) =>
+  css`
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: ${direction};
   `;
-};
 
-export const hnw = (height, width) => {
-  return css`
+export const hnw = (height, width) =>
+  css`
     height: ${height};
     width: ${width};
   `;
-};

@@ -1,6 +1,6 @@
 import Head from "next/head";
-import MuiSupplier from "../components/MuiSupplier";
 import Navbar from "../components/Navbar";
+import Supplier from "../components/Supplier";
 import { useEffect } from "react";
 import "../scss/index.scss";
 
@@ -24,10 +24,10 @@ export default function MyApp(props) {
           content="minimum-scale=1, initial-scale=1, width=device-width"
         />
       </Head>
-      <MuiSupplier>
+      <Supplier>
         <Navbar />
         <Component {...pageProps} />
-      </MuiSupplier>
+      </Supplier>
     </React.Fragment>
   );
 }
