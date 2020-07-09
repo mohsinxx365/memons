@@ -1,12 +1,13 @@
 import Head from "next/head";
 import MuiSupplier from "../components/MuiSupplier";
 import Navbar from "../components/Navbar";
+import { useEffect } from "react";
 import "../scss/index.scss";
 
 export default function MyApp(props) {
   const { Component, pageProps } = props;
 
-  React.useEffect(() => {
+  useEffect(() => {
     // Remove the server-side injected CSS.
     const jssStyles = document.querySelector("#jss-server-side");
     if (jssStyles) {

@@ -6,9 +6,9 @@ import {
   BottomNavigation,
   BottomNavigationAction,
 } from "@material-ui/core";
-import "../scss/navbar.scss";
 import { routes } from "../utils/routeData";
 import { useState } from "react";
+import "../scss/navbar.scss";
 
 export default () => {
   const [value, setValue] = useState(0);
