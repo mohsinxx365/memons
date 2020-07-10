@@ -6,9 +6,10 @@ import {
   BottomNavigation,
   BottomNavigationAction,
 } from "@material-ui/core";
+import styled from "styled-components";
 import { routes } from "../utils/routeData";
 import { useState } from "react";
-import "../scss/navbar.scss";
+import { respondTo } from "../utils/styledUtils";
 
 export default () => {
   const [value, setValue] = useState(0);
@@ -18,7 +19,7 @@ export default () => {
   };
 
   return (
-    <React.Fragment>
+    <Container>
       <AppBar className="navigation">
         <div className="logo-container">
           <Typography className="main-title">MOHSIN MEMON</Typography>
@@ -41,6 +42,49 @@ export default () => {
           ))}
         </Tabs>
       </AppBar>
-    </React.Fragment>
+    </Container>
   );
 };
+
+const Container = styled.div`
+  .navigation {
+    background-color: var(--main);
+    box-shadow: var(--shadow);
+    flex-direction: row;
+
+    .main-title {
+      letter-spacing: 2px;
+      font-weight: bold;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      flex-grow: 1;
+      margin-left: 20px;
+      height: 48px;
+    }
+
+    .bottomContainer {
+      display: block;
+      width: 100%;
+      position: fixed;
+      bottom: 0;
+      z-index: 2;
+    }
+
+    .navTabs {
+      display: none;
+    }
+
+    ${respondTo("mdUp")} {
+      .bottomContainer {
+        display: none;
+      }
+
+      .navTabs {
+        display: flex;
+      }
+    }
+  }
+`;

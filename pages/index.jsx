@@ -1,5 +1,4 @@
 import { Typography, Paper } from "@material-ui/core";
-import "../scss/home.scss";
 
 export default () => {
   return (

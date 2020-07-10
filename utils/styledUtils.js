@@ -7,12 +7,7 @@ export const breakpoints = {
   xlUp: 1200,
 };
 
-export const respondTo = (key) => (style) =>
-  css`
-    @media (min-width: ${breakpoints[key]}px) {
-      ${style}
-    }
-  `;
+export const respondTo = (key) => `@media (min-width: ${breakpoints[key]}px)`;
 
 export const flexCenter = (direction) =>
   css`
