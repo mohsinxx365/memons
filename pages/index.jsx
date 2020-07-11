@@ -23,24 +23,25 @@ export default () => {
 
 const Container = styled.div`
   margin-top: 48px;
-  position: relative;
 
   .intro {
     background-color: #fff;
-    .tsparticles {
-      &-canvas-el {
+    position: relative;
+
+    #tsparticles {
+      z-index: 0;
+      .tsparticles-canvas-el {
         position: absolute;
         width: 100%;
         height: 100%;
         padding: -30px;
       }
-
-      z-index: 0;
     }
 
     .content {
       padding: 50px;
-      z-index: 4;
+      position: relative;
+      z-index: 1;
     }
   }
 `;
