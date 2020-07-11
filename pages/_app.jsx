@@ -2,7 +2,6 @@ import Head from "next/head";
 import Navbar from "../components/Navbar";
 import Supplier from "../components/Supplier";
 import { useEffect } from "react";
-import "../scss/index.scss";
 
 export default function MyApp(props) {
   const { Component, pageProps } = props;
