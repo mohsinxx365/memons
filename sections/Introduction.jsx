@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import ParticleBg from "../components/ParticleBg";
 import { respondTo } from "../utils/styledUtils";
+import { IconButton } from "@material-ui/core";
+import MyIcon from "../components/MyIcon";
 
 export default () => {
   return (
@@ -11,10 +13,20 @@ export default () => {
         <h1 className="name">MOHSIN MEMON</h1>
         <h2 className="work">I Build Things For The Web</h2>
         <p className="description">
-          I am a software developer based in india .
-          <br />
-          Specialised in building and designing exceptional websites and apps
+          I am a software developer based in india . Specialised in building and
+          designing exceptional websites and apps .
         </p>
+        <div className="socialBtns">
+          <IconButton>
+            <MyIcon icon="github" />
+          </IconButton>
+          <IconButton>
+            <MyIcon icon="facebook" />
+          </IconButton>
+          <IconButton>
+            <MyIcon icon="twitter" />
+          </IconButton>
+        </div>
       </div>
     </Section>
   );
@@ -23,9 +35,9 @@ export default () => {
 const Section = styled.section`
   background-color: #fff;
   position: relative;
+  border-bottom: 1px dashed #ddd;
+  z-index: 0;
 
-  #tsparticles {
-    z-index: 0;
     .tsparticles-canvas-el {
       position: absolute;
       width: 100%;
@@ -70,6 +82,14 @@ const Section = styled.section`
     z-index: 1;
     transition: padding 0.25s;
   }
+  .socialBtns {
+    margin-top: 2rem;
+    width: 200px;
+    display: flex;
+    border: 1px dashed #ddd;
+    justify-content: space-between;
+    padding: 5px 15px;
+  }
 
   ${respondTo("mdUp")} {
     .name {
@@ -92,6 +112,7 @@ const Section = styled.section`
       letter-spacing: 0.125rem;
     }
   }
+
   ${respondTo("lgUp")} {
     .name {
       font-size: 2.4rem;
